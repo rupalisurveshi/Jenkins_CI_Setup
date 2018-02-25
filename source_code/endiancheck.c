@@ -1,16 +1,12 @@
-#include<stdio.h>
-void main()
+#include"header.h"
+
+void endiancheck()
 {
 int i = 1 ;
-char *p = &i;
+char *p = (char*)&i ;
 if (*p == 1)
 printf("little endian\n");
 else
 printf("big endian\n");
-
-p++;
-
-printf("%d\n",*p);
-
 }
 
